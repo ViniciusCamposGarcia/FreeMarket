@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (4.8.2)
+  - KIF (3.7.1):
+    - KIF/Core (= 3.7.1)
+  - KIF/Core (3.7.1)
+  - Kingfisher (5.3.1)
+  - lottie-ios (3.0.3)
+  - Nimble (6.0.1)
+  - Result (4.0.1)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - KIF
+  - Kingfisher (~> 5.0)
+  - lottie-ios
+  - Nimble (~> 6.0.0)
+  - Result (~> 4.0.0)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - KIF
+    - Kingfisher
+    - lottie-ios
+    - Nimble
+    - Result
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  KIF: af73f6a04539bd205622c2e5ce5f910cc2123d4b
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
+  lottie-ios: 06e0b54aab85ba128e332687d7f4ac4861a7a7ae
+  Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
+  Result: a6e784bebf48b471d59cddc1adb81f41f678c487
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: f478a7cb97efa63b6e7b314612ac6050f7432b7e
+
+COCOAPODS: 1.5.3
