@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00E453792256DCEF0022334E"
+               BlueprintIdentifier = "00E45442225A5B810022334E"
                BuildableName = "FreeMarketUI.framework"
                BlueprintName = "FreeMarketUI"
                ReferencedContainer = "container:FreeMarketUI/FreeMarketUI.xcodeproj">

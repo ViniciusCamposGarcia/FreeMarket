@@ -10,6 +10,7 @@ import UIKit
 
 protocol SearchPresentableListener {
     func didTapSeeResultsButton(query: String)
+    func didTapCancelButton()
 }
 
 class SearchViewController: UIViewController {
@@ -40,6 +41,23 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.barTintColor = .freeMarketYellow
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.isTranslucent = false
+        
+        let searchView = NavigationBarSearchView(frame: .zero)
+        searchView.delegate = self
+        searchView.isSearching = true
+        self.navigationController?.navigationBar.topItem?.titleView = searchView
+    }
+}
+
+extension SearchViewController: NavigationBarSearchViewDelegate {
+    func didTapCancelButton() {
+        listener.didTapCancelButton()
+    }
+    
+    func didTapSeeResults(query: String) {
+        listener.didTapSeeResultsButton(query: query)
     }
 }

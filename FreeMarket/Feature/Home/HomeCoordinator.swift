@@ -33,7 +33,6 @@ final class HomeCoordinator {
 
 extension HomeCoordinator: CoordinatorProtocol {
     
-    
     func initialViewController() -> UIViewController {
         return HomeBuilder().build(with: self)
     }
@@ -69,7 +68,13 @@ extension HomeCoordinator: SearchListener {
     func searchInteract(with event: SearchInteractor.Event) {
         switch event {
         case .search(let query):
+            
+            self.presenter.pushViewController(UIViewController(), animated: false)
+            
+        case .cancel:
             break
         }
+        
+        self.presenter.presentedViewController?.dismiss(animated: true, completion: nil)
     }
 }

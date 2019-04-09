@@ -22,9 +22,7 @@ final class AppCoordinator {
     //---------------------------------------------
     
     private let window: UIWindow
-    private let appDependencyContainer: AppDependencyContainer
-    private let navigationController: UINavigationController
-    
+    private var navigationController: UINavigationController
     private lazy var homeCoordinator: CoordinatorProtocol = HomeCoordinator(presenter: navigationController)
     
     //---------------------------------------------
@@ -33,14 +31,26 @@ final class AppCoordinator {
     
     init(window: UIWindow) {
         self.window = window
-        appDependencyContainer = AppDependencyContainer()
         navigationController = UINavigationController()
-        navigationController.isNavigationBarHidden = true
+        
+        setup()
     }
 }
 
 //---------------------------------------------
-// MARK: - Public methods
+// MARK: - Private methods
+//---------------------------------------------
+
+private extension AppCoordinator  {
+    
+    func setup() {
+        
+        
+    }
+}
+
+//---------------------------------------------
+// MARK: - CoordinatorProtocol
 //---------------------------------------------
 
 extension AppCoordinator: CoordinatorProtocol  {
@@ -52,7 +62,6 @@ extension AppCoordinator: CoordinatorProtocol  {
     func start() {
         window.rootViewController = initialViewController()
         window.makeKeyAndVisible()
-        
         homeCoordinator.start()
     }
 }

@@ -12,20 +12,39 @@ protocol SearchListener {
     func searchInteract(with event: SearchInteractor.Event)
 }
 
-
-final class SearchInteractor: SearchPresentableListener{
+final class SearchInteractor {
     
     enum Event {
         case search(_ query: String)
+        case cancel
     }
     
-    let listener: SearchListener
+    //---------------------------------------------
+    // MARK: - Private properties
+    //---------------------------------------------
+    
+    private let listener: SearchListener
+    
+    //---------------------------------------------
+    // MARK: - Initialization
+    //---------------------------------------------
     
     init(listener: SearchListener) {
         self.listener = listener
     }
+}
+
+//---------------------------------------------
+// MARK: - SearchPresentableListener
+//---------------------------------------------
+
+extension SearchInteractor: SearchPresentableListener {
     
     func didTapSeeResultsButton(query: String) {
         listener.searchInteract(with: .search(query))
+    }
+    
+    func didTapCancelButton() {
+        listener.searchInteract(with: .cancel)
     }
 }
