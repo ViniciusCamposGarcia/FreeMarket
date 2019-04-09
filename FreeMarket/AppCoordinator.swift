@@ -22,7 +22,7 @@ final class AppCoordinator {
     //---------------------------------------------
     
     private let window: UIWindow
-    private var navigationController: UINavigationController
+    private var navigationController: HomeNavigationController
     private lazy var homeCoordinator: CoordinatorProtocol = HomeCoordinator(presenter: navigationController)
     
     //---------------------------------------------
@@ -31,21 +31,7 @@ final class AppCoordinator {
     
     init(window: UIWindow) {
         self.window = window
-        navigationController = UINavigationController()
-        
-        setup()
-    }
-}
-
-//---------------------------------------------
-// MARK: - Private methods
-//---------------------------------------------
-
-private extension AppCoordinator  {
-    
-    func setup() {
-        
-        
+        navigationController = HomeNavigationController()
     }
 }
 

@@ -29,5 +29,8 @@ public extension UIColor {
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
     
-    public static var freeMarketYellow = UIColor(hexString: "fff159")
+    public static var mainYellow = UIColor(hexString: "EAC421")
+    
+    public static var zeroRateGreen = UIColor(hexString: "009D2B")
+    
 }

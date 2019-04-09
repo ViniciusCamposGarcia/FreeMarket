@@ -68,6 +68,7 @@ final class NavigationBarSearchView: XibView {
     //---------------------------------------------
     
     @IBAction private func cancelButtonTap() {
+        isSearching = false
         delegate?.didTapCancelButton()
     }
 }
@@ -75,6 +76,7 @@ final class NavigationBarSearchView: XibView {
 extension NavigationBarSearchView: UITextFieldDelegate {
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let query = queryTextField.text, !query.isEmpty {
+            isSearching = false
             delegate?.didTapSeeResults(query: query)
         }
         return true

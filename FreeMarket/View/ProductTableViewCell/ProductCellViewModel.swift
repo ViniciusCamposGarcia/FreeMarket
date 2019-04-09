@@ -10,6 +10,7 @@ import Foundation
 
 final class ProductCellViewModel {
     
+    let id: String
     let imageURLString: String
     let title: String
     let priceString: String
@@ -19,11 +20,12 @@ final class ProductCellViewModel {
     
     init(product: Product) {
      
+        id = product.id
         imageURLString = product.thumbnail
         title = product.title
         priceString = "R$ \(product.price)"
         let isZeroRate = product.installments.rate == 0
-        installmentsDescription = "\(product.installments.amount)x R$ \(product.installments.amount) \(isZeroRate ? "sem juros" : "")"
+        installmentsDescription = "\(product.installments.quantity)x R$ \(product.installments.amount) \(isZeroRate ? "sem juros" : "")"
         self.isZeroRate = isZeroRate
         freeShippingString = product.shipping.freeShipping ? "frete grátis" : nil
     }

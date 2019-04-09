@@ -9,9 +9,18 @@
 import Foundation
 import Alamofire
 import Result
+import SwiftyJSON
 
 class NetworkRepositoryAlamofireAdapter: NetworkRepositoryProtocol{
-    func request(endpoint: EndpointProtocol, completion: @escaping (NetworkResult<Any, NetworkError>) -> Void) {
+    func request(endpoint: EndpointProtocol, completion: @escaping (NetworkResult<JSON, NetworkError>) -> Void) {
+        
+        print(
+            """
+                -----------REQUEST-----------
+                \(endpoint.urlString())
+                -----------------------------
+            """
+        )
         
         Alamofire.request(endpoint.urlString(),
                           method: httpMethodAdapted(endpoint.method),
@@ -22,7 +31,18 @@ class NetworkRepositoryAlamofireAdapter: NetworkRepositoryProtocol{
                             switch response.result {
                                 
                             case .success(let value):
-                                completion(.success(value))
+                                
+                                let jsonValue = JSON(value)
+                                
+                                print(
+                                    """
+                                    -----------RESPONSE-----------
+                                    \(jsonValue)
+                                    -----------------------------
+                                    """
+                                )
+                                
+                                completion(.success(jsonValue))
                             case .failure:
                                 completion(.failure(.noConnection))
                             }

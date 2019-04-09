@@ -12,9 +12,9 @@ extension Date {
     
     static func fromFormattedString(_ dateString: String) -> Date? {
         
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "pt_BR")
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZ"
-        return formatter.date(from: dateString)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        dateFormatter.locale = Locale(identifier: "pt_BR")
+        return dateFormatter.date(from:dateString)
     }
 }

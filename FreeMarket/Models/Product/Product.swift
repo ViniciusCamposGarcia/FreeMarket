@@ -44,7 +44,7 @@ struct Product {
             let id = json["id"].string,
             let stopTime = Date.fromFormattedString(json["stop_time"].stringValue),
             let seller = Seller(json: json["seller"]),
-            let sellerAddress = SellerAddress(json: json["sellerAddress"])
+            let sellerAddress = SellerAddress(json: json["seller_address"])
             else { return nil }
         
         self.id = id

@@ -8,6 +8,7 @@
 
 import Foundation
 import Result
+import SwiftyJSON
 
 public enum NetworkHttpMethod: String {
     case options = "OPTIONS"
@@ -28,7 +29,7 @@ public typealias NetworkParameters = [String: Any]
 public typealias NetworkHeaders = [String: String]
 
 protocol NetworkRepositoryProtocol {
-    func request(endpoint: EndpointProtocol, completion: @escaping (NetworkResult<Any, NetworkError>) -> Void)
+    func request(endpoint: EndpointProtocol, completion: @escaping (NetworkResult<JSON, NetworkError>) -> Void)
 }
 
 public enum NetworkError: Error {

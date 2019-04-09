@@ -16,6 +16,7 @@ final class HomeCoordinator {
     //---------------------------------------------
     
     private let presenter: UINavigationController
+    private let productUseCases = ProductUsecases()
     
     //---------------------------------------------
     // MARK: - Initialization
@@ -69,12 +70,30 @@ extension HomeCoordinator: SearchListener {
         switch event {
         case .search(let query):
             
-            self.presenter.pushViewController(UIViewController(), animated: false)
+            let productListViewController = ProductListBuilder().build(with: self,
+                                                                       productUseCases: productUseCases,
+                                                                       query: query)
+            
+            self.presenter.pushViewController(productListViewController, animated: false)
             
         case .cancel:
             break
         }
         
         self.presenter.presentedViewController?.dismiss(animated: true, completion: nil)
+    }
+}
+
+//---------------------------------------------
+// MARK: - ProductListListener
+//---------------------------------------------
+
+extension HomeCoordinator: ProductListListener {
+    func productListInteract(with event: ProductListInteractor.Event) {
+        
+        switch event {
+        case .showProduct(let id):
+            break
+        }
     }
 }
