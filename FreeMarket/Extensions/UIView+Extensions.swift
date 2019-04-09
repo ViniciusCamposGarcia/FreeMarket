@@ -11,21 +11,31 @@ import UIKit
 
 extension UIView {
     
-    func fadeIn() {
+    func fadeIn(completion: (() -> Void)?) {
         
         self.alpha = 0
         
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.3, animations: {
+            
             self.alpha = 1
-        }
+            
+        }, completion: { _ in
+            
+            completion?()
+        })
     }
     
-    func fadeOut() {
+    func fadeOut(completion: (() -> Void)?) {
         
         self.alpha = 1
         
-        UIView.animate(withDuration: 0.3) {
-            self.alpha = 0
-        }
+        UIView.animate(withDuration: 0.3, animations: {
+            
+            self.alpha = 1
+            
+        }, completion: { _ in
+            
+            completion?()
+        })
     }
 }

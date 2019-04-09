@@ -31,7 +31,14 @@ class ProductListViewController: UIViewController {
     //---------------------------------------------
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var animationView: AnimationView!
+    @IBOutlet weak var animationView: AnimationView! {
+        didSet {
+            let starAnimation = Animation.named("loading")
+            animationView.animation = starAnimation
+            animationView.loopMode = .loop
+            animationView.play()
+        }
+    }
     
     //---------------------------------------------
     // MARK: - Private propeties
@@ -87,18 +94,21 @@ extension ProductListViewController {
         case .loading?:
             
             tableView.alpha = 0
-            animationView.fadeIn()
+            animationView.fadeIn(completion: nil)
             
         case .error(let viewError)?:
             
             //TODO implement view error handling
-            animationView.fadeIn()
             
             break
         case .showResults(let cellViewModels)?:
             
-            animationView.fadeOut()
-            tableView.fadeIn()
+            animationView.fadeOut {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+                    self.animationView.stop()
+                })
+            }
+            tableView.fadeIn(completion: nil)
             self.cellViewModels = cellViewModels
             
             break
