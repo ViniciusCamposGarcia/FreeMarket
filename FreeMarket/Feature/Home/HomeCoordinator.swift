@@ -93,6 +93,7 @@ extension HomeCoordinator: ProductListListener {
         
         switch event {
         case .showProduct(let id):
+            print("Open detail of: \(id)")
             break
         }
     }

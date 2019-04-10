@@ -58,12 +58,11 @@ extension ProductListInteractor: ProductListPresentableListener {
             }, ifFailure: { error in
                 
                 self.productListControllable?.configure(with: .error(viewError: error))
-                
             })
         }
     }
     
     func didTapCell(itemId: String) {
-        
+        listener?.productListInteract(with: .showProduct(id: itemId))
     }
 }

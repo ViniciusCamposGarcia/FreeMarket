@@ -25,7 +25,7 @@ final class ProductCellViewModel {
         title = product.title
         priceString = "R$ \(product.price)"
         let isZeroRate = product.installments.rate == 0
-        installmentsDescription = "\(product.installments.quantity)x R$ \(product.installments.amount) \(isZeroRate ? "sem juros" : "")"
+        installmentsDescription = "\(product.installments.quantity)x \(product.installments.amount.currencyString) \(isZeroRate ? "sem juros" : "")"
         self.isZeroRate = isZeroRate
         freeShippingString = product.shipping.freeShipping ? "frete grátis" : nil
     }

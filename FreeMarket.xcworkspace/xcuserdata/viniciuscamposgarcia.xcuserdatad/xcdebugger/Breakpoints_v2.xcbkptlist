@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FreeMarket/Feature/ProductList/ProductListInteractor.swift"
-            timestampString = "576483811.394511"
+            timestampString = "576557868.860422"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FreeMarket/Feature/ProductList/ProductListInteractor.swift"
-            timestampString = "576483811.3949161"
+            timestampString = "576557868.860497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -49,38 +49,22 @@
             endingLineNumber = "56"
             landmarkName = "cellViewModels"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FreeMarket.ProductListViewController.__allocating_init(listener: FreeMarket.ProductListPresentableListener) -&gt; FreeMarket.ProductListViewController"
-                  moduleName = "FreeMarket"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/viniciuscamposgarcia/Desktop/FreeMarket/FreeMarket/Feature/ProductList/View/ProductListViewController.swift"
-                  timestampString = "576483214.1881191"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FreeMarket.ProductListViewController.init(listener: FreeMarket.ProductListPresentableListener) -&gt; FreeMarket.ProductListViewController"
-                  moduleName = "FreeMarket"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/viniciuscamposgarcia/Desktop/FreeMarket/FreeMarket/Feature/ProductList/View/ProductListViewController.swift"
-                  timestampString = "576483214.190716"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "31">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreeMarket/Feature/ProductList/View/ProductListViewController.swift"
+            timestampString = "576557395.600845"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
