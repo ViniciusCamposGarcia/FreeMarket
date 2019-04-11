@@ -9,9 +9,7 @@
 import Foundation
 
 class UseCases {
-    
     var networkRepository: NetworkRepositoryProtocol {
-        
         #if DEBUG
             return NetworkRepositoryAlamofireAdapter()
         #else

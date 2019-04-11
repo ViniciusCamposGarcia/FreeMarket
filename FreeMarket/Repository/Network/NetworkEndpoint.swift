@@ -20,3 +20,13 @@ protocol EndpointProtocol {
     var headers: NetworkHeaders? { get }
     func urlString() -> String
 }
+
+extension EndpointProtocol {
+    var parameters: NetworkParameters? {
+        return nil
+    }
+    
+    var headers: NetworkHeaders? {
+        return nil
+    }
+}

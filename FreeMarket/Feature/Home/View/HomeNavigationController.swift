@@ -9,7 +9,30 @@
 import UIKit
 
 class HomeNavigationController: UINavigationController, UINavigationControllerDelegate {
-
+    
+    //-----------------------------------------------------------------------------
+    // MARK: - Initialization
+    //-----------------------------------------------------------------------------
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        modalTransitionStyle = .crossDissolve
+    }
+    
+    override init(rootViewController: UIViewController) {
+        super.init(rootViewController: rootViewController)
+        modalTransitionStyle = .crossDissolve
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        modalTransitionStyle = .crossDissolve
+    }
+    
+    //-----------------------------------------------------------------------------
+    // MARK: - View lifecycle
+    //-----------------------------------------------------------------------------
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBar.tintColor = .black
@@ -18,6 +41,10 @@ class HomeNavigationController: UINavigationController, UINavigationControllerDe
         self.navigationBar.isTranslucent = false
         self.delegate = self
     }
+    
+    //-----------------------------------------------------------------------------
+    // MARK: - Delegate
+    //-----------------------------------------------------------------------------
     
     func navigationController(_ navigationController: UINavigationController,
                               willShow viewController: UIViewController,

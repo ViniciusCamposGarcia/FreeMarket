@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 import RxSwift
+import RxCocoa
 
 public protocol NavigationBarSearchViewDelegate: class {
     func didTapCancelButton()
-    func didAskForAutoComplete(query: String)
     func didTapSeeResults(query: String)
 }
 

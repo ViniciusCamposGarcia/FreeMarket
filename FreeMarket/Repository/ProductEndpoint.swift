@@ -35,14 +35,6 @@ enum ProductEndpoint: EndpointProtocol {
         }
     }
     
-    var parameters: NetworkParameters? {
-        return nil
-    }
-    
-    var headers: NetworkHeaders? {
-        return nil
-    }
-    
     func urlString() -> String {
         return NetworkEndpoint.ProductionServer.baseURLString.appending(path)
     }

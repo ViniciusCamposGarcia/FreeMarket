@@ -22,7 +22,9 @@ target 'FreeMarket' do
     target 'FreeMarketTests' do
         inherit! :search_paths
         # Pods for testing
-        pod 'Nimble', '~> 6.0.0'
+        pod 'Result', '~> 4.0.0'
+        pod 'Quick', '~> 1'
+        pod 'Nimble', '~> 7'
     end
     
     target 'FreeMarketUITests' do
@@ -31,4 +33,18 @@ target 'FreeMarket' do
         pod 'KIF', :configurations => ['Debug']
     end
     
+end
+
+#############################
+# Config                    #
+#############################
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '4.2'
+            config.build_settings['GCC_WARN_INHIBIT_ALL_WARNINGS'] = 'Yes'
+            config.build_settings['CLANG_WARN_STRICT_PROTOTYPES'] = 'Yes'
+        end
+    end
 end

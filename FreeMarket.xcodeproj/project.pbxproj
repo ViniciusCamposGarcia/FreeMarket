@@ -76,6 +76,10 @@
 		3A1E5DB301FA155F27C829F3 /* Pods_FreeMarketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC594792EBBDF17A34ACAE9 /* Pods_FreeMarketTests.framework */; };
 		921B16EA5FCE51F95EFD1E3F /* Pods_FreeMarket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4765F58C9E438E1C02B181A9 /* Pods_FreeMarket.framework */; };
 		C4E22A852E864538CA126CDA /* Pods_FreeMarketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0266541D6C3F7F3AFE7B3E3E /* Pods_FreeMarketUITests.framework */; };
+		E635876A225FEEA600515A75 /* HomeInteractor+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6358769225FEEA600515A75 /* HomeInteractor+Specs.swift */; };
+		E635876C225FF32A00515A75 /* HomeCoordinator+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E635876B225FF32A00515A75 /* HomeCoordinator+Specs.swift */; };
+		E635876E225FF55000515A75 /* SearchInteractor+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E635876D225FF55000515A75 /* SearchInteractor+Specs.swift */; };
+		E6358770225FF94200515A75 /* ProductListInteractor+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E635876F225FF94200515A75 /* ProductListInteractor+Specs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +193,10 @@
 		DBC594792EBBDF17A34ACAE9 /* Pods_FreeMarketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeMarketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDBA37AD249AD57DA9F9C53F /* Pods-FreeMarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeMarket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreeMarket/Pods-FreeMarket.debug.xcconfig"; sourceTree = "<group>"; };
 		E537168CE15DAD2D785DF001 /* Pods-FreeMarketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeMarketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FreeMarketTests/Pods-FreeMarketTests.release.xcconfig"; sourceTree = "<group>"; };
+		E6358769225FEEA600515A75 /* HomeInteractor+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeInteractor+Specs.swift"; sourceTree = "<group>"; };
+		E635876B225FF32A00515A75 /* HomeCoordinator+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeCoordinator+Specs.swift"; sourceTree = "<group>"; };
+		E635876D225FF55000515A75 /* SearchInteractor+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchInteractor+Specs.swift"; sourceTree = "<group>"; };
+		E635876F225FF94200515A75 /* ProductListInteractor+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductListInteractor+Specs.swift"; sourceTree = "<group>"; };
 		ED176C8BE88CE0CADBEA77BE /* Pods-FreeMarketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeMarketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreeMarketTests/Pods-FreeMarketTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -305,6 +313,7 @@
 		00E453642256DAAE0022334E /* FreeMarketTests */ = {
 			isa = PBXGroup;
 			children = (
+				E6358768225FEE7A00515A75 /* Specs */,
 				00E453652256DAAE0022334E /* FreeMarketTests.swift */,
 				00E453672256DAAE0022334E /* Info.plist */,
 			);
@@ -571,6 +580,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E6358768225FEE7A00515A75 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				E6358769225FEEA600515A75 /* HomeInteractor+Specs.swift */,
+				E635876B225FF32A00515A75 /* HomeCoordinator+Specs.swift */,
+				E635876D225FF55000515A75 /* SearchInteractor+Specs.swift */,
+				E635876F225FF94200515A75 /* ProductListInteractor+Specs.swift */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -807,11 +827,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FreeMarketTests/Pods-FreeMarketTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -914,6 +938,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E635876A225FEEA600515A75 /* HomeInteractor+Specs.swift in Sources */,
+				E635876E225FF55000515A75 /* SearchInteractor+Specs.swift in Sources */,
+				E6358770225FF94200515A75 /* ProductListInteractor+Specs.swift in Sources */,
+				E635876C225FF32A00515A75 /* HomeCoordinator+Specs.swift in Sources */,
 				00E453662256DAAE0022334E /* FreeMarketTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -40,10 +40,6 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        navigationController?.navigationBar.barTintColor = .mainYellow
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.isTranslucent = false
         
         let searchView = NavigationBarSearchView(frame: .zero)
         searchView.delegate = self
@@ -53,10 +49,7 @@ class SearchViewController: UIViewController {
 }
 
 extension SearchViewController: NavigationBarSearchViewDelegate {
-    func didAskForAutoComplete(query: String) {
-        print("Asking for auto complete: \(query)")
-    }
-    
+
     func didTapCancelButton() {
         listener.didTapCancelButton()
     }

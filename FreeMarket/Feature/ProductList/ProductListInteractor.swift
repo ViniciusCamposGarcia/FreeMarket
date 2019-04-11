@@ -23,7 +23,7 @@ final class ProductListInteractor {
     //---------------------------------------------
     
     private weak var listener: ProductListListener?
-    private weak var productUseCases: ProductUsecases?
+    private weak var productUseCases: ProductUsecasesProtocol?
     private var query: String
     
     //---------------------------------------------
@@ -36,7 +36,7 @@ final class ProductListInteractor {
     // MARK: - Initialization
     //---------------------------------------------
     
-    init(listener: ProductListListener, productUseCases: ProductUsecases, query: String) {
+    init(listener: ProductListListener, productUseCases: ProductUsecasesProtocol, query: String) {
         self.listener = listener
         self.productUseCases = productUseCases
         self.query = query

@@ -14,10 +14,8 @@ final class SearchBuilder {
     func build(with listener: SearchListener) -> UIViewController {
         
         let searchInteractor = SearchInteractor(listener: listener)
-        let navigationController = UINavigationController()
         let searchViewController = SearchViewController(listener: searchInteractor)
-        navigationController.setViewControllers([searchViewController], animated: false)
-        navigationController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        let navigationController = HomeNavigationController(rootViewController: searchViewController)
         return navigationController
     }
 }

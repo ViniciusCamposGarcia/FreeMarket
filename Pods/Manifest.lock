@@ -5,7 +5,8 @@ PODS:
   - KIF/Core (3.7.1)
   - Kingfisher (5.3.1)
   - lottie-ios (3.0.3)
-  - Nimble (6.0.1)
+  - Nimble (7.3.4)
+  - Quick (1.3.4)
   - Result (4.0.1)
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
@@ -18,7 +19,8 @@ DEPENDENCIES:
   - KIF
   - Kingfisher (~> 5.0)
   - lottie-ios
-  - Nimble (~> 6.0.0)
+  - Nimble (~> 7)
+  - Quick (~> 1)
   - Result (~> 4.0.0)
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
@@ -32,6 +34,7 @@ SPEC REPOS:
     - Kingfisher
     - lottie-ios
     - Nimble
+    - Quick
     - Result
     - RxCocoa
     - RxSwift
@@ -43,13 +46,14 @@ SPEC CHECKSUMS:
   KIF: af73f6a04539bd205622c2e5ce5f910cc2123d4b
   Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   lottie-ios: 06e0b54aab85ba128e332687d7f4ac4861a7a7ae
-  Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Quick: f4f7f063c524394c73ed93ac70983c609805d481
   Result: a6e784bebf48b471d59cddc1adb81f41f678c487
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 9beb7cfeaf958b1eca068e1e8004aad89be1bcbe
+PODFILE CHECKSUM: 724414c4990e33c5ae3a3d6f63b9d4bc5304121e
 
 COCOAPODS: 1.5.3

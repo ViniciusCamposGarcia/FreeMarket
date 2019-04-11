@@ -10,13 +10,16 @@ import Foundation
 import Result
 import SwiftyJSON
 
-protocol ProductUsecasesProtocol {
-    func products(query: String, completion: (_ products: [Product]) -> Void)
+protocol ProductUsecasesProtocol: class {
+    func products(query: String,
+                  completion: @escaping (_ result: Result<[Product], ViewError>) -> Void)
+    func product(id: String,
+                 completion: @escaping (_ result: Result<ProductDetail, ViewError>) -> Void)
 }
 
-final class ProductUsecases: UseCases {
+final class ProductUsecases: UseCases, ProductUsecasesProtocol {
 
-    func products(query: String, completion: @escaping (_ products: Result<[Product], ViewError>) -> Void) {
+    func products(query: String, completion: @escaping (_ result: Result<[Product], ViewError>) -> Void) {
         
         let trimmedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines)
         let adaptedQuery = trimmedQuery.replacingOccurrences(of: " ", with: "_")
@@ -44,7 +47,7 @@ final class ProductUsecases: UseCases {
         }
     }
     
-    func product(id: String, completion: @escaping (_ products: Result<ProductDetail, ViewError>) -> Void) {
+    func product(id: String, completion: @escaping (_ result: Result<ProductDetail, ViewError>) -> Void) {
         
         let trimmedId = id.trimmingCharacters(in: .whitespacesAndNewlines)
         

@@ -23,7 +23,7 @@ final class AppCoordinator {
     
     private let window: UIWindow
     private var navigationController: HomeNavigationController
-    private lazy var homeCoordinator: CoordinatorProtocol = HomeCoordinator(presenter: navigationController)
+    private lazy var homeCoordinator = HomeCoordinator(presenter: navigationController)
     
     //---------------------------------------------
     // MARK: - Initialization
