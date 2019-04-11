@@ -326,7 +326,6 @@
 				00E454B2225C6B9C0022334E /* Lottie */,
 				00E4535C2256DAAE0022334E /* Info.plist */,
 				00E453572256DAAE0022334E /* Assets.xcassets */,
-				00E453592256DAAE0022334E /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -506,6 +505,7 @@
 			children = (
 				00E4548D225AB8630022334E /* XibView.swift */,
 				00E454A6225C28970022334E /* ViewError.swift */,
+				00E453592256DAAE0022334E /* LaunchScreen.storyboard */,
 				00806345225D96A70001AF2F /* Cells */,
 				00E4548E225AB8630022334E /* NavigationBarDummyView */,
 				00E45492225AB8630022334E /* NavigationBarSearchView */,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,22 +15,30 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwT-Cq-5iI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
-                                <color key="backgroundColor" red="1" green="0.94509803921568625" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.90997409326424872" green="0.81251792210955853" blue="0.16801640471561172" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="Qxv-gp-KOZ"/>
+                                    <constraint firstAttribute="height" constant="44" id="Qxv-gp-KOZ"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ctb-GJ-fU4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <color key="backgroundColor" red="0.90997409326424872" green="0.81251792210955853" blue="0.16801640471561172" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Ctb-GJ-fU4" firstAttribute="bottom" secondItem="IwT-Cq-5iI" secondAttribute="bottom" id="661-jm-dF9"/>
                             <constraint firstItem="IwT-Cq-5iI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J72-45-XSw"/>
                             <constraint firstItem="IwT-Cq-5iI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="V1i-gQ-PkE"/>
-                            <constraint firstItem="IwT-Cq-5iI" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="dpQ-Cc-Sd6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="IwT-Cq-5iI" secondAttribute="top" id="eTE-xT-fUE"/>
+                            <constraint firstItem="Ctb-GJ-fU4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f7S-GS-SfY"/>
+                            <constraint firstItem="Ctb-GJ-fU4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hyq-PO-yLD"/>
+                            <constraint firstItem="Ctb-GJ-fU4" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="j5G-Cl-Qg1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
