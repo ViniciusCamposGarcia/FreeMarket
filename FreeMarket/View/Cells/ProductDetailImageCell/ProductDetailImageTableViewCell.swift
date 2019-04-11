@@ -33,7 +33,7 @@ class ProductDetailImageTableViewCell: UITableViewCell {
                                      options: [KingfisherOptionsInfoItem.memoryCacheExpiration(.seconds(60 * 10))])
         
         offsetControlProperty.subscribe { event in
-            if let offset = event.element {
+            if let offset = event.element, offset.y > 0 {
                 self.paralaxEffect(withOffset: offset.y)
             }
         }.disposed(by: disposeBag)
