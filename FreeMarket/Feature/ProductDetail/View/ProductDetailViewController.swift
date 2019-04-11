@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 protocol ProductDetailPresentableListener: class {
     func viewDidLoad()
@@ -18,7 +20,7 @@ protocol ProductDetailControllable: class {
 
 protocol ProductDetailCellViewable {
     var type: AnyClass { get }
-    func configured(cell: UITableViewCell) -> UITableViewCell
+    func configured(cell: UITableViewCell, offsetControlProperty: ControlProperty<CGPoint>) -> UITableViewCell
     var reuseIdentifier: String { get }
 }
 
@@ -31,7 +33,7 @@ extension ProductDetailCellViewable {
 class ProductDetailViewController: UIViewController {
 
     enum State {
-        case show(String)
+        case show(productDetailCellViewables: [ProductDetailCellViewable])
     }
     
     //---------------------------------------------
@@ -45,7 +47,11 @@ class ProductDetailViewController: UIViewController {
     //---------------------------------------------
     
     private var listener: ProductDetailPresentableListener
-    private var productDetailCellViewables: [ProductDetailCellViewable] = [ProductDetailImageTableViewModel()]
+    private var productDetailCellViewables: [ProductDetailCellViewable] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     //---------------------------------------------
     // MARK: - Initialization
@@ -63,12 +69,7 @@ class ProductDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        productDetailCellViewables.forEach {
-            tableView.register(
-                UINib(nibName: String(describing: $0.type), bundle: nil),
-                forCellReuseIdentifier: $0.reuseIdentifier)
-        }
+        listener.viewDidLoad()
     }
 }
 
@@ -79,7 +80,15 @@ class ProductDetailViewController: UIViewController {
 extension ProductDetailViewController: ProductDetailControllable {
     
     func configure(with state: ProductDetailViewController.State) {
-        
+        switch state {
+        case .show(let productDetailCellViewables):
+            productDetailCellViewables.forEach {
+                tableView.register(
+                    UINib(nibName: String(describing: $0.type), bundle: nil),
+                    forCellReuseIdentifier: $0.reuseIdentifier)
+            }
+            self.productDetailCellViewables = productDetailCellViewables
+        }
     }
 }
 
@@ -101,15 +110,8 @@ extension ProductDetailViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        return productDetailCellViewable.configured(cell: cell)
-    }
-}
-
-extension ProductDetailViewController: UITableViewDelegate {
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if tableView.contentOffset.y < 0 {
-            
-        }
+        return productDetailCellViewable.configured(
+            cell: cell,
+            offsetControlProperty: tableView.rx.contentOffset.asControlProperty())
     }
 }

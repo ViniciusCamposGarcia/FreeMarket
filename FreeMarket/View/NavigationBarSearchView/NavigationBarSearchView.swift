@@ -8,9 +8,11 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 public protocol NavigationBarSearchViewDelegate: class {
     func didTapCancelButton()
+    func didAskForAutoComplete(query: String)
     func didTapSeeResults(query: String)
 }
 

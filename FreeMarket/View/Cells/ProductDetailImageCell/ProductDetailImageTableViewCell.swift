@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import RxSwift
+import RxCocoa
 
 class ProductDetailImageTableViewCell: UITableViewCell {
 
@@ -17,17 +19,28 @@ class ProductDetailImageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productImageViewTopConstraint: NSLayoutConstraint!
+    let disposeBag = DisposeBag()
     
-    func configure(viewModel: ProductDetailImageTableViewModel) {
+    func configure(viewModel: ProductDetailImageCellViewModel, offsetControlProperty: ControlProperty<CGPoint>) {
         
-        let url = URL(string: viewModel.imageURLString)
+        guard let imageURLString = viewModel.imageURLString else {
+            return
+        }
+        
+        let url = URL(string: imageURLString)
         productImageView.kf.setImage(with: url,
                                      placeholder: UIImage(named: "loading"),
                                      options: [KingfisherOptionsInfoItem.memoryCacheExpiration(.seconds(60 * 10))])
+        
+        offsetControlProperty.subscribe { event in
+            if let offset = event.element {
+                self.paralaxEffect(withOffset: offset.y)
+            }
+        }.disposed(by: disposeBag)
     }
     
     func paralaxEffect(withOffset: CGFloat) {
-        let distanceFromTop = min(withOffset * 0.3, productImageView.frame.height)
+        let distanceFromTop = min(withOffset * 0.5, productImageView.frame.height)
         UIView.animate(withDuration: 0.0) {
             self.productImageViewTopConstraint.constant = distanceFromTop
             self.layoutIfNeeded()

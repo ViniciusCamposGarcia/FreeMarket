@@ -15,14 +15,14 @@ enum APIRouterError: Error {
 enum ProductEndpoint: EndpointProtocol {
     
     case search(query: String)
-    case detail(productId: Int)
+    case detail(productId: String)
     
     var method: NetworkHttpMethod {
         switch self {
         case .search:
             return .get
         case .detail:
-            return .post
+            return .get
         }
     }
     

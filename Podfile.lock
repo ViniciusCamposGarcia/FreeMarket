@@ -7,6 +7,9 @@ PODS:
   - lottie-ios (3.0.3)
   - Nimble (6.0.1)
   - Result (4.0.1)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
   - SwiftLint (0.31.0)
   - SwiftyJSON (4.3.0)
 
@@ -17,6 +20,8 @@ DEPENDENCIES:
   - lottie-ios
   - Nimble (~> 6.0.0)
   - Result (~> 4.0.0)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
   - SwiftLint
   - SwiftyJSON (~> 4.0)
 
@@ -28,6 +33,8 @@ SPEC REPOS:
     - lottie-ios
     - Nimble
     - Result
+    - RxCocoa
+    - RxSwift
     - SwiftLint
     - SwiftyJSON
 
@@ -38,9 +45,11 @@ SPEC CHECKSUMS:
   lottie-ios: 06e0b54aab85ba128e332687d7f4ac4861a7a7ae
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
   Result: a6e784bebf48b471d59cddc1adb81f41f678c487
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: a55007e3b8d648a412aa2505686351e3760d345d
+PODFILE CHECKSUM: 9beb7cfeaf958b1eca068e1e8004aad89be1bcbe
 
 COCOAPODS: 1.5.3

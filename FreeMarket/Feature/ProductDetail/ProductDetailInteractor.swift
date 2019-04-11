@@ -35,6 +35,20 @@ final class ProductDetailInteractor {
 
 extension ProductDetailInteractor: ProductDetailPresentableListener {
     func viewDidLoad() {
-        
+        productUseCases?.product(id: productId, completion: { result in
+            
+            result.analysis(ifSuccess: { product in
+                
+                let imageViewModel = ProductDetailImageCellViewModel(productDetail: product)
+                let titleViewModel = ProductDetailTitleCellViewModel(productDetail: product)
+                
+                self.productDetailControllable?.configure(
+                    with: ProductDetailViewController.State.show(
+                        productDetailCellViewables: [imageViewModel, titleViewModel]))
+                
+            }, ifFailure: { _ in
+            
+            })
+        })
     }
 }

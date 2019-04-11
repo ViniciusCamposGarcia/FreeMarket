@@ -43,4 +43,29 @@ final class ProductUsecases: UseCases {
             })
         }
     }
+    
+    func product(id: String, completion: @escaping (_ products: Result<ProductDetail, ViewError>) -> Void) {
+        
+        let trimmedId = id.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        networkRepository.request(endpoint: ProductEndpoint.detail(productId: trimmedId)) { result in
+            
+            result.analysis(ifSuccess: { value in
+                
+                guard let product = ProductDetail(json: value) else {
+                    completion(.failure(.noData))
+                    return
+                }
+                
+                completion(.success(product))
+                
+            }, ifFailure: { error in
+                
+                switch error {
+                case .noConnection:
+                    completion(.failure(.noInternetAccess))
+                }
+            })
+        }
+    }
 }

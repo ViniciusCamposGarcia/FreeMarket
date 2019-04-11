@@ -16,6 +16,8 @@ target 'FreeMarket' do
     pod 'Result', '~> 4.0.0'
     pod 'SwiftyJSON', '~> 4.0'
     pod 'SwiftLint'
+    pod 'RxSwift',    '~> 4.0'
+    pod 'RxCocoa',    '~> 4.0'
     
     target 'FreeMarketTests' do
         inherit! :search_paths

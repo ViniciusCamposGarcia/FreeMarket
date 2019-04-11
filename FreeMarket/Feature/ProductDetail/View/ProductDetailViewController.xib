@@ -26,7 +26,6 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="TMr-mF-wsT"/>
-                        <outlet property="delegate" destination="-1" id="eSY-9x-6Ha"/>
                     </connections>
                 </tableView>
             </subviews>
