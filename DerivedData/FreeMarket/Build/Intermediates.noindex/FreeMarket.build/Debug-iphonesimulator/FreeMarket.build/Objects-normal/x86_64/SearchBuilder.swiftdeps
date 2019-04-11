@@ -1,0 +1,204 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SearchBuilder"
+provides-nominal:
+- "10FreeMarket13SearchBuilderC"
+provides-member:
+- ["10FreeMarket13SearchBuilderC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "Array"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "SearchBuilder"
+- !private "SearchInteractor"
+- "SearchListener"
+- !private "SearchViewController"
+- !private "UIModalTransitionStyle"
+- !private "UINavigationController"
+- "UIViewController"
+depends-member:
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "modalTransitionStyle"]
+- !private ["s7CVarArgP", "setViewControllers"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "modalTransitionStyle"]
+- !private ["s28CustomDebugStringConvertibleP", "setViewControllers"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "modalTransitionStyle"]
+- !private ["s23CustomStringConvertibleP", "setViewControllers"]
+- !private ["SQ", "crossDissolve"]
+- !private ["SQ", "init"]
+- !private ["SQ", "modalTransitionStyle"]
+- !private ["SQ", "setViewControllers"]
+- !private ["7RxCocoa11HasDelegateP", "init"]
+- !private ["7RxCocoa11HasDelegateP", "modalTransitionStyle"]
+- !private ["7RxCocoa11HasDelegateP", "setViewControllers"]
+- !private ["SH", "crossDissolve"]
+- !private ["SH", "init"]
+- !private ["SH", "modalTransitionStyle"]
+- !private ["SH", "setViewControllers"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "modalTransitionStyle"]
+- !private ["So8NSCodingP", "setViewControllers"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "modalTransitionStyle"]
+- !private ["So26NSExtensionRequestHandlingP", "setViewControllers"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "modalTransitionStyle"]
+- !private ["So8NSObjectC", "setViewControllers"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "modalTransitionStyle"]
+- !private ["So8NSObjectP", "setViewControllers"]
+- !private ["10FreeMarket31NavigationBarSearchViewDelegateP", "init"]
+- !private ["SY", "crossDissolve"]
+- !private ["7RxSwift18ReactiveCompatibleP", "init"]
+- !private ["7RxSwift18ReactiveCompatibleP", "modalTransitionStyle"]
+- !private ["7RxSwift18ReactiveCompatibleP", "setViewControllers"]
+- !private ["10FreeMarket13SearchBuilderC", "SearchInteractor"]
+- ["10FreeMarket13SearchBuilderC", "SearchListener"]
+- !private ["10FreeMarket13SearchBuilderC", "SearchViewController"]
+- !private ["10FreeMarket13SearchBuilderC", "UIModalTransitionStyle"]
+- !private ["10FreeMarket13SearchBuilderC", "UINavigationController"]
+- ["10FreeMarket13SearchBuilderC", "UIViewController"]
+- ["10FreeMarket13SearchBuilderC", "build"]
+- ["10FreeMarket13SearchBuilderC", "init"]
+- !private ["10FreeMarket16SearchInteractorC", "deinit"]
+- !private ["10FreeMarket16SearchInteractorC", "init"]
+- !private ["10FreeMarket25SearchPresentableListenerP", "init"]
+- !private ["10FreeMarket20SearchViewControllerC", "deinit"]
+- !private ["10FreeMarket20SearchViewControllerC", "init"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "modalTransitionStyle"]
+- !private ["So21UIAppearanceContainerP", "setViewControllers"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "modalTransitionStyle"]
+- !private ["So18UIContentContainerP", "setViewControllers"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "modalTransitionStyle"]
+- !private ["So18UIFocusEnvironmentP", "setViewControllers"]
+- !private ["So22UIModalTransitionStyleV", "crossDissolve"]
+- !private ["So22UINavigationControllerC", "init"]
+- !private ["So22UINavigationControllerC", "modalTransitionStyle"]
+- !private ["So22UINavigationControllerC", "setViewControllers"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "modalTransitionStyle"]
+- !private ["So30UIPasteConfigurationSupportingP", "setViewControllers"]
+- !private ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "modalTransitionStyle"]
+- !private ["So11UIResponderC", "setViewControllers"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "modalTransitionStyle"]
+- !private ["So30UIResponderStandardEditActionsP", "setViewControllers"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "modalTransitionStyle"]
+- !private ["So16UIStateRestoringP", "setViewControllers"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "modalTransitionStyle"]
+- !private ["So18UITraitEnvironmentP", "setViewControllers"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "modalTransitionStyle"]
+- !private ["So23UIUserActivityRestoringP", "setViewControllers"]
+- !private ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "modalTransitionStyle"]
+- !private ["So16UIViewControllerC", "setViewControllers"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "modalTransitionStyle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setViewControllers"]
+depends-nominal:
+- !private "s7CVarArgP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s23CustomStringConvertibleP"
+- !private "SQ"
+- !private "7RxCocoa11HasDelegateP"
+- !private "SH"
+- !private "So8NSCodingP"
+- !private "So26NSExtensionRequestHandlingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "10FreeMarket31NavigationBarSearchViewDelegateP"
+- !private "SY"
+- !private "7RxSwift18ReactiveCompatibleP"
+- "10FreeMarket13SearchBuilderC"
+- !private "10FreeMarket16SearchInteractorC"
+- !private "10FreeMarket25SearchPresentableListenerP"
+- !private "10FreeMarket20SearchViewControllerC"
+- !private "So21UIAppearanceContainerP"
+- !private "So18UIContentContainerP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So22UIModalTransitionStyleV"
+- !private "So22UINavigationControllerC"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So16UIStateRestoringP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- !private "So16UIViewControllerC"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.apinotesc"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/x86_64.swiftmodule"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxCocoa/RxCocoa.framework/Modules/RxCocoa.swiftmodule/x86_64.swiftmodule"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/lottie-ios/Lottie.framework/Modules/Lottie.swiftmodule/x86_64.swiftmodule"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/Kingfisher.swiftmodule/x86_64.swiftmodule"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework/Modules/RxSwift.swiftmodule/x86_64.swiftmodule"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/Result/Result.framework/Modules/Result.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Accelerate.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxCocoa/RxCocoa.framework/Headers/_RX.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxCocoa/RxCocoa.framework/Headers/RxCocoa-umbrella.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-umbrella.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/lottie-ios/Lottie.framework/Headers/lottie-ios-umbrella.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework/Headers/RxSwift-umbrella.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/Result/Result.framework/Headers/Result-umbrella.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxCocoa/RxCocoa.framework/Headers/RxCocoa.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxCocoa/RxCocoa.framework/Headers/_RXObjCRuntime.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxCocoa/RxCocoa.framework/Headers/RxCocoaRuntime.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxCocoa/RxCocoa.framework/Headers/_RXKVOObserver.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxCocoa/RxCocoa.framework/Headers/RxCocoa-Swift.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/lottie-ios/Lottie.framework/Headers/Lottie-Swift.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-Swift.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework/Headers/RxSwift-Swift.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/Result/Result.framework/Headers/Result-Swift.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxCocoa/RxCocoa.framework/Headers/_RXDelegateProxy.h"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxCocoa/RxCocoa.framework/Modules/module.modulemap"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/lottie-ios/Lottie.framework/Modules/module.modulemap"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/module.modulemap"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework/Modules/module.modulemap"
+- "/Users/vinicius.garcia/Desktop/FreeMarket/DerivedData/FreeMarket/Build/Products/Debug-iphonesimulator/Result/Result.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Accelerate.framework/Headers/Accelerate.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "916b73cbbb2284c393495c3c8e1f2b18"

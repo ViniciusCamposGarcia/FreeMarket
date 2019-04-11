@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "70928b3ce6fb6517a596bda58ea1afe5"
+build_time: [1555016556, 36096000]
+inputs:
+  "/Users/vinicius.garcia/Desktop/FreeMarket/Pods/SwiftyJSON/Source/SwiftyJSON/SwiftyJSON.swift": [1555015798, 0]

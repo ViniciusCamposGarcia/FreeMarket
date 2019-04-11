@@ -17,7 +17,6 @@ struct ProductDetailSellerAddress {
 	var city : AddressRegion?
 	var state : AddressRegion?
 	var country : AddressRegion?
-	var searchLocation : SearchLocation?
 	var latitude : Double?
 	var longitude : Double?
 	var id : Int?
@@ -29,7 +28,6 @@ struct ProductDetailSellerAddress {
         city = AddressRegion(json: json["city"])
         state = AddressRegion(json: json["state"])
         country = AddressRegion(json: json["country"])
-        searchLocation = SearchLocation(json: json["search_location"])
         latitude = json["latitude"].double
         longitude = json["longitude"].double
         id = json["id"].int

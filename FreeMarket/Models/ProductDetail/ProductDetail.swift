@@ -35,7 +35,6 @@ struct ProductDetail {
 	var secure_thumbnail : String?
 	var pictures : [Pictures]?
 	var video_id : String?
-	var descriptions : [Descriptions]?
 	var accepts_mercadopago : Bool?
 	var non_mercado_pago_payment_methods : [String]?
 	var shipping : ProductDetailShipping?
@@ -93,7 +92,6 @@ struct ProductDetail {
         secure_thumbnail = json["secure_thumbnail"].string
         pictures = json["pictures"].arrayValue.map(Pictures.init)
         video_id = json["video_id"].string
-        descriptions = json["descriptions"].arrayValue.map(Descriptions.init)
         accepts_mercadopago = json["accepts_mercadopago"].bool
         non_mercado_pago_payment_methods = json["non_mercado_pago_payment_methods"].arrayValue.compactMap { $0.string }
         shipping = ProductDetailShipping(json: json["shipping"])

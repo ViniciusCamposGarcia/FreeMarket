@@ -1,0 +1,8 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "ab6fdaa91de94445ec8a6f2bf7650d33"
+build_time: [1555016556, 19513000]
+inputs:
+  "/Users/vinicius.garcia/Desktop/FreeMarket/Pods/Result/Result/AnyError.swift": [1555015798, 0]
+  "/Users/vinicius.garcia/Desktop/FreeMarket/Pods/Result/Result/NoError.swift": [1555015798, 0]
+  "/Users/vinicius.garcia/Desktop/FreeMarket/Pods/Result/Result/Result.swift": [1555015798, 0]
+  "/Users/vinicius.garcia/Desktop/FreeMarket/Pods/Result/Result/ResultProtocol.swift": [1555015798, 0]
