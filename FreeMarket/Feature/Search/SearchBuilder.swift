@@ -15,7 +15,9 @@ final class SearchBuilder {
         
         let searchInteractor = SearchInteractor(listener: listener)
         let searchViewController = SearchViewController(listener: searchInteractor)
-        let navigationController = HomeNavigationController(rootViewController: searchViewController)
+        let navigationController = HomeNavigationController(
+            rootViewController: searchViewController
+        )
         return navigationController
     }
 }
