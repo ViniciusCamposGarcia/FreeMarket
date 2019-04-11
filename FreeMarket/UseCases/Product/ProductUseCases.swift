@@ -18,7 +18,8 @@ final class ProductUsecases: UseCases {
 
     func products(query: String, completion: @escaping (_ products: Result<[Product], ViewError>) -> Void) {
         
-        let adaptedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: " ", with: "_")
+        let trimmedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        let adaptedQuery = trimmedQuery.replacingOccurrences(of: " ", with: "_")
         
         networkRepository.request(endpoint: ProductEndpoint.search(query: adaptedQuery)) { result in
             

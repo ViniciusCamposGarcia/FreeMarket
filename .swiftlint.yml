@@ -1,0 +1,17 @@
+disabled_rules:
+  - trailing_whitespace
+
+excluded:
+  - Pods
+  - FreeMarket/Models
+  - FreeMarket/Extensions
+line_length:
+  - 120
+  - 180
+
+identifier_name:
+  min_length:
+    error: 3 
+  excluded: # excluded via string array
+    - id
+    - URL

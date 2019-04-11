@@ -15,6 +15,6 @@ extension Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         dateFormatter.locale = Locale(identifier: "pt_BR")
-        return dateFormatter.date(from:dateString)
+        return dateFormatter.date(from: dateString)
     }
 }

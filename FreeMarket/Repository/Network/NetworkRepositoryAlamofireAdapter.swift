@@ -11,7 +11,7 @@ import Alamofire
 import Result
 import SwiftyJSON
 
-class NetworkRepositoryAlamofireAdapter: NetworkRepositoryProtocol{
+class NetworkRepositoryAlamofireAdapter: NetworkRepositoryProtocol {
     func request(endpoint: EndpointProtocol, completion: @escaping (NetworkResult<JSON, NetworkError>) -> Void) {
         
         print(
@@ -49,7 +49,6 @@ class NetworkRepositoryAlamofireAdapter: NetworkRepositoryProtocol{
         }
     }
 
-    
     //---------------------------------------------
     // MARK: - Private methods
     //---------------------------------------------

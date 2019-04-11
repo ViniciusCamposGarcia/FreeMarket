@@ -8,9 +8,7 @@
 
 import Foundation
 
-
 enum APIRouterError: Error {
-    
     case jsonEncodingFailed
 }
 

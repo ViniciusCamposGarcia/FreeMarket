@@ -78,7 +78,11 @@ class ProductListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
+        
+        tableView.register(
+            UINib(nibName: "ProductTableViewCell", bundle: nil),
+            forCellReuseIdentifier: cellReuseIdentifier)
+        
         configureForState()
         listener.viewDidLoad()
     }
@@ -96,7 +100,7 @@ extension ProductListViewController {
             tableView.alpha = 0
             animationView.fadeIn(completion: nil)
             
-        case .error(let viewError)?:
+        case .error?:
             
             //TODO implement view error handling
             
@@ -110,16 +114,13 @@ extension ProductListViewController {
             }
             tableView.fadeIn(completion: nil)
             self.cellViewModels = cellViewModels
-            
-            break
+        
         case .none:
             break
         }
     }
     
     private func configureForLoading() {
-        
-        
         
     }
 }
@@ -153,10 +154,14 @@ extension ProductListViewController: UITableViewDataSource {
         return cellViewModels.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? ProductTableViewCell else {
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: cellReuseIdentifier) as? ProductTableViewCell else {
             return UITableViewCell()
         }
+        
         cell.configure(with: cellViewModels[indexPath.row])
         return cell
     }

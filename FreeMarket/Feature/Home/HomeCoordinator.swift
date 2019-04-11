@@ -22,7 +22,7 @@ final class HomeCoordinator {
     // MARK: - Initialization
     //---------------------------------------------
     
-    init(presenter: UINavigationController){
+    init(presenter: UINavigationController) {
         self.presenter = presenter
     }
 }
@@ -30,7 +30,6 @@ final class HomeCoordinator {
 //---------------------------------------------
 // MARK: - CoordinatorProtocol
 //---------------------------------------------
-
 
 extension HomeCoordinator: CoordinatorProtocol {
     
@@ -46,7 +45,6 @@ extension HomeCoordinator: CoordinatorProtocol {
 //---------------------------------------------
 // MARK: - HomeListener
 //---------------------------------------------
-
 
 extension HomeCoordinator: HomeListener {
     
@@ -90,11 +88,13 @@ extension HomeCoordinator: SearchListener {
 
 extension HomeCoordinator: ProductListListener {
     func productListInteract(with event: ProductListInteractor.Event) {
-        
         switch event {
-        case .showProduct(let id):
-            print("Open detail of: \(id)")
-            break
+        case .showProduct(let productId):
+            
+            let productDetailViewController = ProductDetailBuilder().build(withProductUseCases: productUseCases,
+                                                                           productId: productId)
+            
+            presenter.pushViewController(productDetailViewController, animated: true)
         }
     }
 }

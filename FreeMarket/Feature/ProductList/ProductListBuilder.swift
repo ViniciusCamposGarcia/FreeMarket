@@ -15,7 +15,9 @@ final class ProductListBuilder {
                productUseCases: ProductUsecases,
                query: String) -> UIViewController {
         
-        let productListInteractor = ProductListInteractor(listener: listener, productUseCases: productUseCases, query: query)
+        let productListInteractor = ProductListInteractor(listener: listener,
+                                                          productUseCases: productUseCases,
+                                                          query: query)
         let productListViewController = ProductListViewController(listener: productListInteractor)
         productListInteractor.productListControllable = productListViewController
         return productListViewController

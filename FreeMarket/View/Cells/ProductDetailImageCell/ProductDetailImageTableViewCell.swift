@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProductDetailImageTableViewCell: UITableViewCell {
 
@@ -19,5 +20,17 @@ class ProductDetailImageTableViewCell: UITableViewCell {
     
     func configure(viewModel: ProductDetailImageTableViewModel) {
         
+        let url = URL(string: viewModel.imageURLString)
+        productImageView.kf.setImage(with: url,
+                                     placeholder: UIImage(named: "loading"),
+                                     options: [KingfisherOptionsInfoItem.memoryCacheExpiration(.seconds(60 * 10))])
+    }
+    
+    func paralaxEffect(withOffset: CGFloat) {
+        let distanceFromTop = min(withOffset * 0.3, productImageView.frame.height)
+        UIView.animate(withDuration: 0.0) {
+            self.productImageViewTopConstraint.constant = distanceFromTop
+            self.layoutIfNeeded()
+        }
     }
 }

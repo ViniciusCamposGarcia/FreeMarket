@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 @IBDesignable
 class XibView: UIView {
     
@@ -35,12 +34,12 @@ class XibView: UIView {
         
         addSubview(view)
     }
-    
+    // swiftlint:disable force_cast
     private func loadViewFromNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
         let nibView = nib.instantiate(withOwner: self, options: nil).first as! UIView
-        
         return nibView
     }
+    // swiftlint:enable force_cast
 }

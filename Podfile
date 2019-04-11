@@ -15,6 +15,7 @@ target 'FreeMarket' do
     pod 'lottie-ios'
     pod 'Result', '~> 4.0.0'
     pod 'SwiftyJSON', '~> 4.0'
+    pod 'SwiftLint'
     
     target 'FreeMarketTests' do
         inherit! :search_paths

@@ -39,7 +39,7 @@ final class AppCoordinator {
 // MARK: - CoordinatorProtocol
 //---------------------------------------------
 
-extension AppCoordinator: CoordinatorProtocol  {
+extension AppCoordinator: CoordinatorProtocol {
  
     func initialViewController() -> UIViewController {
         return window.rootViewController ?? navigationController

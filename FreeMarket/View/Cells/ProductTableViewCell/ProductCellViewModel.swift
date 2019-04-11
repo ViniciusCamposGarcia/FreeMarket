@@ -23,10 +23,17 @@ final class ProductCellViewModel {
         id = product.id
         imageURLString = product.thumbnail
         title = product.title
-        priceString = "R$ \(product.price)"
+        priceString = product.price.currencyString
+        
         let isZeroRate = product.installments.rate == 0
-        installmentsDescription = "\(product.installments.quantity)x \(product.installments.amount.currencyString) \(isZeroRate ? "sem juros" : "")"
         self.isZeroRate = isZeroRate
+        
         freeShippingString = product.shipping.freeShipping ? "frete grátis" : nil
+        
+        let quantity = product.installments.quantity
+        let currencyString = product.installments.amount.currencyString
+        let rateString = isZeroRate ? "sem juros" : ""
+        
+        installmentsDescription = "\(quantity)x \(currencyString) \(rateString)"
     }
 }

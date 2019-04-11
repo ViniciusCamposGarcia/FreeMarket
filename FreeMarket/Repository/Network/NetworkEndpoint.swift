@@ -15,7 +15,6 @@ struct NetworkEndpoint {
 }
 
 protocol EndpointProtocol {
-    
     var method: NetworkHttpMethod { get }
     var parameters: NetworkParameters? { get }
     var headers: NetworkHeaders? { get }

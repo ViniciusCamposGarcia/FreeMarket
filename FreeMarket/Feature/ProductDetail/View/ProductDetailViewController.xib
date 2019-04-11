@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailViewController" customModule="FreeMarket" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="2jf-4Q-ZwV" id="NyM-nj-mod"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

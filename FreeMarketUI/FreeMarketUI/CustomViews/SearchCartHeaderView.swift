@@ -10,7 +10,4 @@ import Foundation
 
 public final class SearchCartHeaderView {
     
-    
-    
-    
 }

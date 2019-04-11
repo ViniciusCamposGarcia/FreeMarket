@@ -11,22 +11,21 @@ import UIKit
 
 extension ProductDetailCellViewable where Self: ProductDetailImageTableViewModel {
     
-    func configure(cell: UITableViewCell) {
+    func configured(cell: UITableViewCell) -> UITableViewCell {
         (cell as? ProductDetailImageTableViewCell)?.configure(viewModel: self)
+        return cell
+    }
+    
+    var type: AnyClass {
+        return ProductDetailImageTableViewCell.self
     }
 }
 
 final class ProductDetailImageTableViewModel: ProductDetailCellViewable {
     
-    var type: AnyClass {
-        return ProductDetailImageTableViewCell.self
-    }
+    let imageURLString: String
     
-    var reuseIdentifier: String {
-        return "ProductDetailImageTableViewCellIdentifier"
-    }
-    
-    init() {
-        
+    init(imageURLString: String = "http://mlb-s1-p.mlstatic.com/513211-MLB20506483802_122015-I.jpg") {
+        self.imageURLString = imageURLString
     }
 }

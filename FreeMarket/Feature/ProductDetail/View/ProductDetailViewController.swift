@@ -10,15 +10,30 @@ import UIKit
 
 protocol ProductDetailPresentableListener: class {
     func viewDidLoad()
-    func didTapCell(itemId: String)
 }
 
 protocol ProductDetailControllable: class {
-    func configure(with state: ProductListViewController.State)
+    func configure(with state: ProductDetailViewController.State)
+}
+
+protocol ProductDetailCellViewable {
+    var type: AnyClass { get }
+    func configured(cell: UITableViewCell) -> UITableViewCell
+    var reuseIdentifier: String { get }
+}
+
+extension ProductDetailCellViewable {
+    var reuseIdentifier: String {
+        return String(describing: type)
+    }
 }
 
 class ProductDetailViewController: UIViewController {
 
+    enum State {
+        case show(String)
+    }
+    
     //---------------------------------------------
     // MARK: - Outlets
     //---------------------------------------------
@@ -30,7 +45,7 @@ class ProductDetailViewController: UIViewController {
     //---------------------------------------------
     
     private var listener: ProductDetailPresentableListener
-    private var productDetailCellViewables: [ProductDetailCellViewable] = []
+    private var productDetailCellViewables: [ProductDetailCellViewable] = [ProductDetailImageTableViewModel()]
     
     //---------------------------------------------
     // MARK: - Initialization
@@ -39,7 +54,7 @@ class ProductDetailViewController: UIViewController {
     init(listener: ProductDetailPresentableListener) {
         
         self.listener = listener
-        super.init(nibName: String(describing: ProductListViewController.self), bundle: nil)
+        super.init(nibName: String(describing: ProductDetailViewController.self), bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -48,12 +63,23 @@ class ProductDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        productDetailCellViewables.forEach {
-            tableView.register(UINib(nibName: String(describing: $0.type), bundle: nil), forCellReuseIdentifier: $0.reuseIdentifier)
-        }
         
-        // Do any additional setup after loading the view.
+        productDetailCellViewables.forEach {
+            tableView.register(
+                UINib(nibName: String(describing: $0.type), bundle: nil),
+                forCellReuseIdentifier: $0.reuseIdentifier)
+        }
+    }
+}
+
+//---------------------------------------------
+// MARK: - ProductDetailControllable
+//---------------------------------------------
+
+extension ProductDetailViewController: ProductDetailControllable {
+    
+    func configure(with state: ProductDetailViewController.State) {
+        
     }
 }
 
@@ -64,9 +90,8 @@ class ProductDetailViewController: UIViewController {
 extension ProductDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return productDetailCellViewables.count
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -76,7 +101,15 @@ extension ProductDetailViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        productDetailCellViewable.configure(cell: cell)
+        return productDetailCellViewable.configured(cell: cell)
     }
 }
 
+extension ProductDetailViewController: UITableViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if tableView.contentOffset.y < 0 {
+            
+        }
+    }
+}

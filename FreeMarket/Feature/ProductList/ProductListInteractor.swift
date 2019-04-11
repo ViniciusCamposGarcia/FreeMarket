@@ -53,7 +53,8 @@ extension ProductListInteractor: ProductListPresentableListener {
             
             result.analysis(ifSuccess: { products in
                 
-                self.productListControllable?.configure(with: .showResults(cellViewModels: products.compactMap(ProductCellViewModel.init)))
+                self.productListControllable?.configure(
+                    with: .showResults(cellViewModels: products.compactMap(ProductCellViewModel.init)))
             
             }, ifFailure: { error in
                 
