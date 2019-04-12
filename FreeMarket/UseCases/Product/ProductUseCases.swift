@@ -23,8 +23,9 @@ final class ProductUsecases: UseCases, ProductUsecasesProtocol {
         
         let trimmedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines)
         let adaptedQuery = trimmedQuery.replacingOccurrences(of: " ", with: "_")
+        let searchQuery = adaptedQuery.folding(options: .diacriticInsensitive, locale: .current)
         
-        networkRepository.request(endpoint: ProductEndpoint.search(query: adaptedQuery)) { result in
+        networkRepository.request(endpoint: ProductEndpoint.search(query: searchQuery)) { result in
             
             result.analysis(ifSuccess: { value in
                 

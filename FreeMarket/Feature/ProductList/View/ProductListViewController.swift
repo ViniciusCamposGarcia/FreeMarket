@@ -97,7 +97,7 @@ extension ProductListViewController {
         switch state {
         case .loading?:
             
-            tableView.alpha = 0
+            tableView.fadeOut(completion: nil)
             animationView.fadeIn(completion: nil)
             
         case .error?:
@@ -108,20 +108,15 @@ extension ProductListViewController {
         case .showResults(let cellViewModels)?:
             
             animationView.fadeOut {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-                    self.animationView.stop()
-                })
+                self.animationView.stop()
             }
+            
             tableView.fadeIn(completion: nil)
             self.cellViewModels = cellViewModels
         
         case .none:
             break
         }
-    }
-    
-    private func configureForLoading() {
-        
     }
 }
 

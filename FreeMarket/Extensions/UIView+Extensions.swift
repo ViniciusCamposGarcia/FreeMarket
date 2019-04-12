@@ -13,8 +13,6 @@ extension UIView {
     
     func fadeIn(completion: (() -> Void)?) {
         
-        self.alpha = 0
-        
         UIView.animate(withDuration: 0.3, animations: {
             
             self.alpha = 1
@@ -27,11 +25,9 @@ extension UIView {
     
     func fadeOut(completion: (() -> Void)?) {
         
-        self.alpha = 1
-        
         UIView.animate(withDuration: 0.3, animations: {
             
-            self.alpha = 1
+            self.alpha = 0
             
         }, completion: { _ in
             
