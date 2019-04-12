@@ -52,11 +52,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: NavigationBarDummyViewDelegate {
     
-    func searchCartViewSearchTap() {
+    func navigationBarDummyViewSearchTap() {
         listener.didTapSearchButton()
-    }
-    
-    func searchCartViewCartTap() {
-        //TODO not implemented
     }
 }

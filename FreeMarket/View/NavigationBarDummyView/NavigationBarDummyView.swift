@@ -10,8 +10,7 @@ import Foundation
 import UIKit
 
 public protocol NavigationBarDummyViewDelegate: class {
-    func searchCartViewSearchTap()
-    func searchCartViewCartTap()
+    func navigationBarDummyViewSearchTap()
 }
 
 final class NavigationBarDummyView: XibView {
@@ -49,6 +48,6 @@ final class NavigationBarDummyView: XibView {
     //---------------------------------------------
     
     @IBAction private func searchViewTap() {
-        delegate?.searchCartViewSearchTap()
+        delegate?.navigationBarDummyViewSearchTap()
     }
 }

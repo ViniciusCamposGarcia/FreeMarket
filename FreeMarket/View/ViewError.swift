@@ -16,10 +16,27 @@ enum ViewError: Error {
     var errorTitle: String {
         
         switch self {
+        case .noInternetAccess, .noData:
+            return "Ops!"
+        }
+    }
+    
+    var errorMessage: String {
+        
+        switch self {
         case .noInternetAccess:
             return "check your internet connection and try again"
         case .noData:
             return "Nothing to show"
+        }
+    }
+    
+    var canRetry: Bool {
+        switch self {
+        case .noInternetAccess:
+            return true
+        case .noData:
+            return false
         }
     }
 }

@@ -24,6 +24,7 @@
 		0080634A225D97BA0001AF2F /* ProductDetailImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00806348225D97BA0001AF2F /* ProductDetailImageTableViewCell.xib */; };
 		0080634C225D99420001AF2F /* ProductDetailImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0080634B225D99420001AF2F /* ProductDetailImageCellViewModel.swift */; };
 		008E832D22601EC700172B01 /* UIView+Extensions+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008E832C22601EC700172B01 /* UIView+Extensions+Specs.swift */; };
+		008E832F2260298C00172B01 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008E832E2260298C00172B01 /* UIViewController+Extensions.swift */; };
 		00E453512256DAAB0022334E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E453502256DAAB0022334E /* AppDelegate.swift */; };
 		00E453582256DAAE0022334E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E453572256DAAE0022334E /* Assets.xcassets */; };
 		00E4535B2256DAAE0022334E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E453592256DAAE0022334E /* LaunchScreen.storyboard */; };
@@ -131,6 +132,7 @@
 		00806348225D97BA0001AF2F /* ProductDetailImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailImageTableViewCell.xib; sourceTree = "<group>"; };
 		0080634B225D99420001AF2F /* ProductDetailImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailImageCellViewModel.swift; sourceTree = "<group>"; };
 		008E832C22601EC700172B01 /* UIView+Extensions+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions+Specs.swift"; sourceTree = "<group>"; };
+		008E832E2260298C00172B01 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		00E4534D2256DAAB0022334E /* FreeMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E453502256DAAB0022334E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00E453572256DAAE0022334E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 				00E45425225A30DA0022334E /* Date+Extensions.swift */,
 				00E454B3225C6BE60022334E /* UIView+Extensions.swift */,
 				00806341225D92220001AF2F /* Decimal+Extensions.swift */,
+				008E832E2260298C00172B01 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -924,6 +927,7 @@
 				006FB0C0225F04640085D694 /* ProductDetailSellerAddress.swift in Sources */,
 				006FB0A3225EFDC60085D694 /* ProductDetailTitleTableViewCell.swift in Sources */,
 				00E45407225944F10022334E /* UseCases.swift in Sources */,
+				008E832F2260298C00172B01 /* UIViewController+Extensions.swift in Sources */,
 				00E453B22256E3610022334E /* HomeViewController.swift in Sources */,
 				006FB0C1225F04640085D694 /* ProductDetailShipping.swift in Sources */,
 				00E45426225A30DA0022334E /* Date+Extensions.swift in Sources */,

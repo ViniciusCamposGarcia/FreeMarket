@@ -12,6 +12,7 @@ import Lottie
 protocol ProductListPresentableListener: class {
     func viewDidLoad()
     func didTapCell(itemId: String)
+    func didTapRetry()
 }
 
 protocol ProductListControllable: class {
@@ -21,7 +22,7 @@ protocol ProductListControllable: class {
 class ProductListViewController: UIViewController {
     
     enum State {
-        case loading(title: String)
+        case loading
         case error(viewError: ViewError)
         case showResults(cellViewModels: [ProductCellViewModel])
     }
@@ -100,11 +101,16 @@ extension ProductListViewController {
             tableView.fadeOut(completion: nil)
             animationView.fadeIn(completion: nil)
             
-        case .error?:
+        case .error(let viewError)?:
             
-            //TODO implement view error handling
+            animationView.fadeOut {
+                self.animationView.stop()
+            }
             
-            break
+            presentAlert(with: viewError) {
+                self.listener.didTapRetry()
+            }
+            
         case .showResults(let cellViewModels)?:
             
             animationView.fadeOut {

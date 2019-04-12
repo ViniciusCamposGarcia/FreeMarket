@@ -41,13 +41,14 @@ final class ProductListInteractor {
         self.productUseCases = productUseCases
         self.query = query
     }
-}
-
-extension ProductListInteractor: ProductListPresentableListener {
     
-    func viewDidLoad() {
+    //---------------------------------------------
+    // MARK: - Private methods
+    //---------------------------------------------
+    
+    private func load() {
         
-        self.productListControllable?.configure(with: .loading(title: query))
+        self.productListControllable?.configure(with: .loading)
         
         productUseCases?.products(query: query) { result in
             
@@ -55,12 +56,27 @@ extension ProductListInteractor: ProductListPresentableListener {
                 
                 self.productListControllable?.configure(
                     with: .showResults(cellViewModels: products.compactMap(ProductCellViewModel.init)))
-            
+                
             }, ifFailure: { error in
                 
                 self.productListControllable?.configure(with: .error(viewError: error))
             })
         }
+    }
+}
+
+//---------------------------------------------
+// MARK: - ProductListPresentableListener
+//---------------------------------------------
+
+extension ProductListInteractor: ProductListPresentableListener {
+    
+    func didTapRetry() {
+        load()
+    }
+    
+    func viewDidLoad() {
+        load()
     }
     
     func didTapCell(itemId: String) {
